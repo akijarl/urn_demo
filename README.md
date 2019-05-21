@@ -24,24 +24,28 @@ Each group will consist of 4 people:
   4. one to record the bead color for each draw
   
 #### B. Choose a "contamination" parameter *C*
-  1. Roll the 4-sided dice. 
-  2. **Record the number** as the true value of the contamination parameter *C*.
+  1. Flip a coin. 
+  2. Record the true value of the contamination parameter, *C*, for your simulation
+   as *C=1* if you got a "head" and record *C=2* if you got a "tails".
   
 #### C. Choose the bead colors for each cup
-Each cup will initially hold 6 beads with a color that matches the cup color.
-Next we are going to "contaminate" the matching of bead to cup color in a random way:
+Each cup will initially hold 3 beads with a color that matches the cup color.
+We are going to bring each cup up to a total of 5 beads, in a way that may "contaminate"
+ some of the cups by adding beads of a non-matching color to each cup.
+ 
+  1. If *C=1* for your simulation, add an extra bead of the matching color to each
+  cup. 
   1. Roll the 6-sided dice and use the table below to select pairs of colors that
     will be mingled together.
-  2. For the "1st pair" of colors you selected, Get the pair of cups of the selected
-   pair of color, and do the following steps *C* times:
+  2. For the "1st pair" of colors you selected, get the pair of cups of the selected
+   pair of color and some spare beads of those 2 colors. 
+    Perform the following steps *C* times for *each* of the cups:
        1. Flip the coin. 
-       1. If the coin shows a "head" put a bead of the first color of the pair into
-        *each* of the 2 selected cups
-       1. If the coin shows a "tail" put a bead of the second color of the pair into
-        *each* of the 2 selected cups.
-  3. Repeat step 4 for the "2nd pair" of cups.
-  4. Bring the number of beads in each cup up to 10 by adding beads that match each
-    cup's color. You'll have to add 4 - *C* beads to each cup.
+       1. If the coin shows a "head" add a bead of the same color to that cup
+       1. If the coin shows a "tail" add a bead of the non-matching ("paired") color 
+       to that cup.
+  3. Repeat step 4 for the "2nd pair" of colors.
+  
 
 **Table for selecting color pairs**
 
@@ -78,8 +82,9 @@ Repeat the following XX times:
 
   1. Randomly choose a bead from the "active" cup.
        1. record the bead color,
-       2. record the cup color,
-  2. Use the switch procedure from step "Setup C" to decide whether or not to
+       2. record the cup color
+  2. **Return** the bead to the cup (we are sampling with replacement)
+  3. Use the switch procedure from step "Setup C" to decide whether or not to
      attempt a switch. *If (and only if)* the procedure indicates that you should
      try a switch, roll the 4-sided dice and use the result to set the next "active"
      cup. 
