@@ -38,7 +38,7 @@ We are going to bring each cup up to a total of 8 beads, in a way that may "cont
  some of the cups by adding beads of a non-matching color to each cup.
  
   1. Do the following procedure *C* times (where *C* is the number you rolled in part B):
-      1. Roll a dice. If you roll an odd number put an orange bead into the orange cup; 
+      1. Roll either dice. If you roll an odd number put an orange bead into the orange cup; 
       if your roll was an even number put a green bead into the orange cup.
       2. Repeat the dice rolling procedure for the green cup.
   2. Bring each cup up to 8 total beads by adding beads that match the cup color to each
@@ -56,7 +56,7 @@ We are going to bring each cup up to a total of 8 beads, in a way that may "cont
 | Roll    | *s*      | You'll choose a new cup when...|
 |:-------:|:--------:|:-------------:|
 | 1 or 2  | *s*=1/4  | You roll a "1" on a 4-sided dice |
-| 3 or 4  | *s*=1/2  | You roll an even number on a dice  |
+| 3 or 4  | *s*=1/2  | You roll an even number on either dice  |
 | 5 or 6  | *s*=3/4  | You do **not** roll a "1" on a 4-sided dice  |
 
 
@@ -88,7 +88,7 @@ Repeat the following 10 times:
   two draws? (not the probability that you attempt cup-switch).
 
 **Question 2:** Do you think that a maximum likelihood procedure would be
-  able to prefer the correct value of *s* and *C* based on your sample of 10 draws?
+  able to prefer the correct value of *s* and *C* based on your sample of 10 bead colors?
 
 **Question 3:** If you repeated section E many times to generate long series
   of bead colors each time...
