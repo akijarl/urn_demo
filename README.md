@@ -4,16 +4,16 @@ Markov model and then trying to estimate the parameters governing the simulation
 
 #### Overview
 You will have 2 colored cups (1 green and 1 orange) which contain beads.
-Initially each cup will have 4 beads that match the cups color.
-You will add 4 new beads using a random process described below.
+Initially each cup will have beads that match the cups color.
+You will add new beads using a random process described below.
 This process may "contaminate" the cups such that the beads are not perfect
   predictors of the cup color.
 
 
 The data you will generate will be a series of bead colors.
-We will use dice and coins as randomization devices.
+We will use dice as randomization devices.
 You will randomly choose an "active" cup to start with.
-For each data point you randomly drawing a bead from the active cup, record the bead color, and
+For each data point,  you will randomly draw a bead from the active cup, record the bead color, and
     make a random choice about whether or not a new cup will be selected as the "active" cup.
 
 
@@ -38,7 +38,7 @@ We are going to bring each cup up to a total of 8 beads, in a way that may "cont
  some of the cups by adding beads of a non-matching color to each cup.
  
   1. Do the following procedure *C* times (where *C* is the number you rolled in part B):
-      1. roll the 6-sided dice. If you roll an odd number put an orange bead into the orange cup; 
+      1. Roll a dice. If you roll an odd number put an orange bead into the orange cup; 
       if your roll was an even number put a green bead into the orange cup.
       2. Repeat the dice rolling procedure for the green cup.
   2. Bring each cup up to 8 total beads by adding beads that match the cup color to each
@@ -80,7 +80,7 @@ Repeat the following 10 times:
      attempt a switch.
   4. **If (and only if)** your switch procedure indicates that you should
      attempt a cup-switch, roll the dice and use the "odd=orange and even=green" rule
-     to pick a new cup.
+     to pick a new "active" cup.
 
 ### As a group, discuss these questions
 
@@ -90,34 +90,31 @@ Repeat the following 10 times:
 **Question 2:** Do you think that a maximum likelihood procedure would be
   able to prefer the correct value of *s* and *C* based on your sample of 10 draws?
 
-**Question 3:** If you repeated step **E** many times and generated long series
+**Question 3:** If you repeated section E many times to generate long series
   of bead colors each time...
-
-**Q3A:** Which parameter do you think that you would
+  * **Q3A:** Which parameter do you think that you would
   estimate more precisely using maximum likelihood: *s* or *C* ?
-
-**Q3B:** Do you think that you would be able to estimate the
+  * **Q3B:** Do you think that you would be able to estimate the
   proportion of each bead color in each cup correctly?
-
-**Q3C:** As the length of your series of bead color got *really* long, do you 
+  * **Q3C:** As the length of your series of bead color got *really* long, do you 
   think that you'd be able to reject the alternative values
   of *s* and *C*?
 
 ### F. See what ML would estimate
 Open a browser to http://phylo.bio.ku.edu/mephytis/hmm/index.html
 
-For this part we are not going to use the dice icons.
+For this part we are **not** going to use the dice icons.
   1. Use the drop-down menus
     to set the correct value for *s* and *c* in your simulation.
-  2. In the rows depicting "Urn 1" and "Urn 2" the first circles (which
+  2. In the rows depicting "Urn 1" and "Urn 2", the first circles (which
     are meant to represent beads) are not locked. The number of unlocked
-    circles should be equal to *C*.  
-    **Click** on as many unlocked circles as you need to make "Urn 1" have
+    circles should be equal to *C*.  **Click** on as many unlocked circles
+    as you need to make "Urn 1" have
     the same color composition as your orange cup.
   3. Similiarly, click on the unlocked circles for "urn 2" to make it 
     have the same bead composition as your green cup.
   4. Click on the orange or green +⚱ buttons to enter the data for your 10 
-    cup colors (you can use the grey -⚱ button to back up).
+    cup colors (you can use the grey -⚱ button to back up, if you make an error).
   5. Click on the orange or green circles to enter the data for your first
     10 bead colors.
 
