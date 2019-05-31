@@ -38,9 +38,11 @@ We are going to bring each cup up to a total of 8 beads, in a way that may "cont
  some of the cups by adding beads of a non-matching color to each cup.
  
   1. Do the following procedure *C* times (where *C* is the number you rolled in part B):
+
     1. roll the 6-sided dice. If you roll an odd number put an orange bead into the orange cup; 
       if your roll was an even number put a green bead into the orange cup.
     2. Repeat the dice rolling procedure for the green cup.
+  
   2. Bring each cup up to 8 total beads by adding beads that match the cup color to each
     cup. (if your *C=4* you will already have 8 beads in each cup, so you are done).
   
