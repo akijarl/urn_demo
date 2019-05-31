@@ -46,7 +46,7 @@ We are going to bring each cup up to a total of 8 beads, in a way that may "cont
   
 
 
-#### C. Choose a switching rate parameter, *S*
+#### C. Choose a switching rate parameter, *s*
   1. Roll a 6-sided dice
   2. Use the table to figure out your cup switch parameter (**record as your value
   for s**) and to learn the procedure that
@@ -55,9 +55,9 @@ We are going to bring each cup up to a total of 8 beads, in a way that may "cont
 
 | Roll    | *s*      | You'll choose a new cup when...|
 |:-------:|:--------:|:-------------:|
-| 1 or 2  | *s=1/4*  | You roll a "1" on a 4-sided dice |
-| 3 or 4  | *s=1/2*  | You get a "Head" on a coin toss  |
-| 5 or 6  | *s=3/4*  | You do **not** roll a "1" on a 4-sided dice  |
+| 1 or 2  | *s*=1/4  | You roll a "1" on a 4-sided dice |
+| 3 or 4  | *s*=1/2  | You roll an even number on a dice  |
+| 5 or 6  | *s*=3/4  | You do **not** roll a "1" on a 4-sided dice  |
 
 
 #### D. Randomly choose an "active" cup
@@ -78,11 +78,11 @@ Repeat the following 10 times:
   2. **Return** the bead to the cup (we are sampling with replacement)
   3. Use the switch procedure from step "Setup C" to decide whether or not to
      attempt a switch.
-  4. *If (and only if)* the procedure indicates that you should
+  4. **If (and only if)** your switch procedure indicates that you should
      attempt a cup-switch, roll the dice and use the "odd=orange and even=green" rule
      to pick a new cup.
 
-### Discuss the following questions
+### As a group, discuss these questions
 
 **Question 1:** What is the *probability* that you change the cup color between
   two draws? (not the probability that you attempt cup-switch).
@@ -93,16 +93,46 @@ Repeat the following 10 times:
 **Question 3:** If you repeated step **E** many times and generated long series
   of bead colors each time...
 
-**Q3A** Which parameter do you think that you would
+**Q3A:** Which parameter do you think that you would
   estimate more precisely using maximum likelihood: *s* or *C* ?
 
-**Q3B** Do you think that you would be able to estimate the
+**Q3B:** Do you think that you would be able to estimate the
   proportion of each bead color in each cup correctly?
 
-**Q3C** As the length of your series of bead color got *really* long, do you 
+**Q3C:** As the length of your series of bead color got *really* long, do you 
   think that you'd be able to reject the alternative values
   of *s* and *C*?
 
+### F. See what ML would estimate
+Open a browser to http://phylo.bio.ku.edu/mephytis/hmm/index.html
 
+For this part we are not going to use the dice icons.
+  1. Use the drop-down menus
+    to set the correct value for *s* and *c* in your simulation.
+  2. In the rows depicting "Urn 1" and "Urn 2" the first circles (which
+    are meant to represent beads) are not locked. The number of unlocked
+    circles should be equal to *C*.  
+    **Click** on as many unlocked circles as you need to make "Urn 1" have
+    the same color composition as your orange cup.
+  3. Similiarly, click on the unlocked circles for "urn 2" to make it 
+    have the same bead composition as your green cup.
+  4. Click on the orange or green +⚱ buttons to enter the data for your 10 
+    cup colors (you can use the grey -⚱ button to back up).
+  5. Click on the orange or green circles to enter the data for your first
+    10 bead colors.
+
+A grouped bar chart should appear in the "Inferential stats" section.
+It should update with every new bead color.
+It shows the log-likelihoods for the 12 different models, with 
+the 3 different *s* values being the groups and the 4 different colors
+corresponding to the different possible *c* values.
+
+**Question 4:** Were you correct in **Question 2** above? Do the log-likelihoods make sense?
+
+### G. Continue sampling
+You should be able to use the "# samples/click" slider and "Draw next *#* samples"
+buttons to simulate a lot more data.
+
+**Question 5:** was your answer to **Q3C** correct?
 
 
