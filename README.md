@@ -133,3 +133,6 @@ buttons to simulate a lot more data.
 **Question 5:** was your answer to **Q3C** correct?
 
 
+See https://mtholder.github.io/reveal/midwest-phylo-likelihood.html#/16 for context for the demo.
+
+
