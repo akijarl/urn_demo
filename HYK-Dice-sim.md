@@ -61,21 +61,39 @@ The 3 positive rates in each row add up to the absolute value of the negative fl
 So we can get the probability of each destination base given that there is a substitution
 by dividing each positive number by the absolute value of the diagonal element:
 
-|   | A  | C  | G  | T  |
-|---|---|---|---|---|
-|  A |   |  0.2144 | 0.7144 | 0.07110    |
-|  C |  0.364    |       |   0.182    |   0.454  | 
-|  G | 0.833  | 0.125  |   | 0.041  |
-|  T |  0.190 |   0.714 |  0.096  |   |
+|   |  A    |    C  |    G  |   T   |
+|---|-------|-------|-------|-------|
+| A |       | 0.214 | 0.714 | 0.071 |
+| C | 0.364 |       | 0.182 | 0.454 | 
+| G | 0.833 | 0.125 |       | 0.041 |
+| T | 0.190 | 0.714 | 0.096 |       |
 
 and the cumulative probabilities are:
 
-|   | A  | C  | G  | T  |
-|---|---|---|---|---|
-|  A |   | 0.2144 | 0.9288 | 1.0    |
-|  C |  0.364 | |  0.546 | 1.000   | 
-|  G | 0.833  | 0.958  |   | 1.0  |
-|  T |  0.190 |   0.904 |  1.0  |   |
+|   | A     |  C    | G     | T     |
+|---|-------|-------|-------|-------|
+| A |       | 0.214 | 0.929 | 1.000 |
+| C | 0.364 |       | 0.546 | 1.000 | 
+| G | 0.833 | 0.958 |       | 1.000 |
+| T | 0.190 | 0.904 | 1.000 |       |
 
 
 Use a similar method that you used when choosing a root base to convert these cumulative probabilities into the destination base for each substitution.
+
+#### Summary and visualization
+
+The full *Q* matrix was:
+
+|   |   A    |   C    |   G    |   T    |
+|---|-------:|-------:|-------:|-------:|
+| A | -0.886 |  0.190 |  0.633 |  0.063 |
+| C |  0.253 | -0.696 |  0.127 |  0.316 |
+| G |  1.266 |  0.190 | -1.519 |  0.063 |
+| T |  0.253 |  0.949 |  0.127 | -1.329 |
+
+#### When your current base is...
+##### ... `A` your probability distributions are:
+
+![waiting time density](./images/prob-density-A.png =100x)
+![cumulative waiting time probability](./images/cumulative-prob-A.png =100x)
+![Cumulative probability of mutation](./images/cumulative-prob-bases-A.png =100x)
