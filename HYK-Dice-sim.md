@@ -41,7 +41,7 @@ For each branch:
   3. Find the element on the diagonal for the row that represents the ancestral
     base for the branch. This will be the only negative number in the row. This
     represents the rate of leaving that base. 
-    We'll call the flux out of the base λ..
+    We'll call the flux out of the base λ.
   4. Draw a waiting time, *t*:
       1. draw a random Uniform(0,1) variable, *u*
       2. calculate *t = log(u)/λ*
@@ -52,7 +52,7 @@ For each branch:
       2. **Stop** and move to the next branch.
   7. If *p* is less than the branch length, 
       1. choose a new base to be the current base (see below)
-      2. go back to step 3 of this recipe and continue.
+      2. **go back to step 3** of this recipe and continue.
 
 #### Choosing a new base.
 The new base should be drawn in proportion to the rate of moving into each of the destination
