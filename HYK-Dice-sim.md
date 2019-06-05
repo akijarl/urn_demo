@@ -21,8 +21,8 @@ graphical depiction
 
    1. Draw a random number
    2. Choose a base:
-     * A if *u < 0.4*,
-     * C if *0.4 ≤ u < 0.7*,
-     * G if *0.7 ≤ u < 0.*,
-     * T otherwise
+       * A if *u < 0.4*,
+       * C if *0.4 ≤ u < 0.7*,
+       * G if *0.7 ≤ u < 0.*,
+       * T otherwise
 
