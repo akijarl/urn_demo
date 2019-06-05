@@ -19,10 +19,37 @@ Whenever the instructions call for a Uniform(0,1) variable
 See https://mtholder.github.io/reveal/john-huelsenbeck-dice.html#/4 for a 
 graphical depiction
 
-   1. Draw a random number
+   1. Draw a random Uniform(0,1) variable, *u*
    2. Choose a base:
        * A if *u < 0.4*,
        * C if *0.4 ≤ u < 0.7*,
        * G if *0.7 ≤ u < 0.*,
        * T otherwise
 
+#### Simulate the descendant state for each branch
+See the simulation tree at 
+https://mtholder.github.io/reveal/john-huelsenbeck-dice.html#/6
+
+Once you know the ancestor state for an branch you can use the following recipe
+   to generate a descendant state for that branch.
+So a valid order of branches to sweep over would be 6, 5, 4, 3, 2, 1.
+
+For each branch
+  1. start keeping track of your position on the branch by writing down *p=0* to
+  indicate that you are in the starting point of the branch.
+  2. Set the current base to the ancestral base.
+  3. Find the element on the diagonal for the row that represents the ancestral
+    base for the branch. This will be the only negative number in the row. This
+    represents the rate of leaving that base. 
+    We'll call the flux out of the base λ..
+  4. Draw a waiting time, *t*:
+      1. draw a random Uniform(0,1) variable, *u*
+      2. calculate *t = log(u)/λ*
+  5. Set the current position by adding *t* to *p* (so *p = p + t*)
+  6. If the new value of *p* is longer than the branch length shown on the tree, then
+    no additional substitution occured. 
+      1. Write down your current base as the descendant base.
+      2. **Stop** and move to the next branch.
+  7. If *p* is less than the branch length, 
+      1. choose a new base to be the current base (see below)
+      2. go back to step 3 of this recipe and continue.
