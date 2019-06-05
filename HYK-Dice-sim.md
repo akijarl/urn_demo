@@ -53,3 +53,17 @@ For each branch
   7. If *p* is less than the branch length, 
       1. choose a new base to be the current base (see below)
       2. go back to step 3 of this recipe and continue.
+
+#### Choosing a new base.
+The new base should be drawn in proportion to the rate of moving into each of the destination
+  bases.
+The 3 positive rates in each row add up to the absolute value of the negative flux.
+So we can get the probability of each destination base given that there is a substitution
+by dividing each positive number by the absolute value of the diagonal element:
+
+|   | A  | C  | G  | T  |
+|---|---|---|---|---|
+|  A |   |  0.2144 | 0.7144 | 0.07110    |
+|  C |  0.364    |       |   0.182    |   0.454  | 
+|  G | 0.833  | 0.125  |   | 0.041  |
+|  T |  0.190 |   0.714 |  0.096  |   |
