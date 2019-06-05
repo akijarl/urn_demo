@@ -67,3 +67,15 @@ by dividing each positive number by the absolute value of the diagonal element:
 |  C |  0.364    |       |   0.182    |   0.454  | 
 |  G | 0.833  | 0.125  |   | 0.041  |
 |  T |  0.190 |   0.714 |  0.096  |   |
+
+and the cumulative probabilities are:
+
+|   | A  | C  | G  | T  |
+|---|---|---|---|---|
+|  A |   | 0.2144 | 0.9288 | 1.0    |
+|  C |  0.364 | |  0.546 | 1.000   | 
+|  G | 0.833  | 0.958  |   | 1.0  |
+|  T |  0.190 |   0.904 |  1.0  |   |
+
+
+Use a similar method that you used when choosing a root base to convert these cumulative probabilities into the destination base for each substitution.
