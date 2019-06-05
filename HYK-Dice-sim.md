@@ -8,7 +8,7 @@ Whenever the instructions call for a Uniform(0,1) variable
   you can either:
 
   * call `runif(1)` if `R`, or
-  * roll the 10 sided dice twice. The record the first number as the tenths place
+  * roll the 10 sided dice twice. Record the first number as the tenths place
   and the second number as the hundreths place. 
   So if you rolled a `1` and a `6`, you'd say that your *u=0.16*  for that
   random number draw.
@@ -23,18 +23,18 @@ graphical depiction
    2. Choose a base:
        * A if *u < 0.4*,
        * C if *0.4 ≤ u < 0.7*,
-       * G if *0.7 ≤ u < 0.*,
+       * G if *0.7 ≤ u < 0.9*,
        * T otherwise
 
 #### Simulate the descendant state for each branch
 See the simulation tree at 
 https://mtholder.github.io/reveal/john-huelsenbeck-dice.html#/6
 
-Once you know the ancestor state for an branch you can use the following recipe
+Once you know the ancestor state for a branch you can use the following recipe
    to generate a descendant state for that branch.
-So a valid order of branches to sweep over would be 6, 5, 4, 3, 2, 1.
+So a valid order of branches to sweep over would be 6, 5, 4, 3, 2, and 1 on the figure of the tree.
 
-For each branch
+For each branch:
   1. start keeping track of your position on the branch by writing down *p=0* to
   indicate that you are in the starting point of the branch.
   2. Set the current base to the ancestral base.
