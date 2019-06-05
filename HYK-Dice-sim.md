@@ -94,6 +94,26 @@ The full *Q* matrix was:
 #### When your current base is...
 ##### ... `A` your probability distributions are:
 
-![waiting time density](./images/prob-density-A.png =100x)
-![cumulative waiting time probability](./images/cumulative-prob-A.png =100x)
-![Cumulative probability of mutation](./images/cumulative-prob-bases-A.png =100x)
+|   |       |      |
+|---|-------:|-------:|
+| ![waiting time density](./images/prob-density-A.png) | ![cumulative waiting time probability](./images/cumulative-prob-A.png) | ![Cumulative probability of mutation](./images/cumulative-prob-bases-A.png) |
+
+##### ... `C` your probability distributions are:
+
+|   |       |      |
+|---|-------:|-------:|
+| ![waiting time density](./images/prob-density-C.png) | ![cumulative waiting time probability](./images/cumulative-prob-C.png) | ![Cumulative probability of mutation](./images/cumulative-prob-bases-C.png) |
+
+
+##### ... `G` your probability distributions are:
+
+|   |       |      |
+|---|-------:|-------:|
+| ![waiting time density](./images/prob-density-G.png) | ![cumulative waiting time probability](./images/cumulative-prob-G.png) | ![Cumulative probability of mutation](./images/cumulative-prob-bases-G.png) |
+
+
+##### ... `T` your probability distributions are:
+
+|   |       |      |
+|---|-------:|-------:|
+| ![waiting time density](./images/prob-density-T.png) | ![cumulative waiting time probability](./images/cumulative-prob-T.png) | ![Cumulative probability of mutation](./images/cumulative-prob-bases-T.png) |
