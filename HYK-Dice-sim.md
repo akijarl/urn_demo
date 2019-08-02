@@ -7,7 +7,7 @@ This is a set of instructions for the [dice simulation by John Huelsenbeck](http
 Whenever the instructions call for a Uniform(0,1) variable
   you can either:
 
-  * call `runif(1)` if `R`, or
+  * call `runif(1)` in `R`, or
   * roll the 10 sided dice twice. Record the first number as the tenths place
   and the second number as the hundreths place. 
   So if you rolled a `1` and a `6`, you'd say that your *u=0.16*  for that
