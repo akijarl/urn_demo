@@ -44,7 +44,7 @@ For each branch:
     We'll call the flux out of the base λ.
   4. Draw a waiting time, *t*:
       1. draw a random Uniform(0,1) variable, *u*
-      2. calculate *t = log(u)/λ*
+      2. calculate *t = -log(u)/λ*
   5. Set the current position by adding *t* to *p* (so *p = p + t*)
   6. If the new value of *p* is longer than the branch length shown on the tree, then
     no additional substitution occured. 
